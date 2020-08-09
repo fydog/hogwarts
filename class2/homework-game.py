@@ -4,12 +4,6 @@ class TongLao:
     # em_hp = 0
     # em_hit = 0
 
-    # def __init__(self, hp, em_hp, hit, em_hit):
-    #     self.hp = hp
-    #     self.em_hp = em_hp
-    #     self.hit = hit
-    #     self.em_hit= em_hit
-
     def see_people(self, name):
         # self.see_people() = name
         if name == "WYZ":
