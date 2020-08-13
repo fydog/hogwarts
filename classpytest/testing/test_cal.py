@@ -42,8 +42,9 @@ class TestCal:
 
     def test_add(self, a, b, expect):
         # cal = Calculator()
-        result = self.cal.add(a, b)
+        result = round(self.cal.add(a, b), 2)
         assert expect == result
+    # round()方法返回浮点数x的四舍五入值，round( x [, n]  )，x -- 数值表达式，n -- 数值表达式，表示从小数点位数。
 
     @pytest.mark.div
     # @pytest.mark.parametrize('a', [10, 20, 30])
@@ -54,7 +55,7 @@ class TestCal:
 
     def test_div(self, a, b, expect):
         # cal = Calculator()
-        result = self.cal.div(a, b)
+        result = round(self.cal.div(a, b),2)
         assert expect == result
 
     @pytest.mark.dcount
