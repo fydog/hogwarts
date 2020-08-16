@@ -1,7 +1,6 @@
 import pytest
 import yaml
-import sys
-sys.path.append('..')
+
 
 from classpytest.demo.calculator import Calculator
 
