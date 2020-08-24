@@ -15,6 +15,9 @@ class Base:
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(5)
         self.driver.maximize_window()
+        self.action = ActionChains(self.driver)
+
+
 
 
     def teardown_class(self):

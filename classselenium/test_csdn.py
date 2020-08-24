@@ -22,10 +22,12 @@ class TestDemo1(Base):
         self.driver.find_element_by_css_selector('.userLogin:nth-child(6) .login_img').click()
         windows = self.driver.window_handles
         self.driver.switch_to.window(windows[1])
+        img_position = self.driver.find_element_by_xpath('//*[@id="app"]/div/header/div/div/div[1]/div/img')
+        self.action.move_to_element(img_position).perform()
+
         self.driver.find_element_by_css_selector('.modify-img').click()
-        self.driver.find_element_by_css_selector('.vicp-hint').click()
-        self.driver.find_element_by_css_selector('.input:nth-child(4)').type('C:\fakepath\20180829174746.jpg')
-        self.driver.find_element_by_link_text('上传并保存').click()
+        self.driver.find_element_by_xpath('//*[@id="app"]/div/header/div/div[2]/div/div/div[2]/div[1]/span[1]').send_keys('D:/123.JPG')
+        # self.driver.find_element_by_link_text('上传并保存').click()
 
 
 
