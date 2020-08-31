@@ -1,10 +1,12 @@
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.touch_action import TouchAction
 
 
 class Base:
 
-    def __init__(self):
+    def setup(self):
+
         caps = {}
         caps["platformName"] = "android"
         caps["deviceName"] = "hogwarts"
@@ -14,10 +16,7 @@ class Base:
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 
 
-    def setup(self):
         # 隐式等待
-        self.driver.implicitly_wait(5)
-
-    def teardown(self):
-        self.driver.quit()
+        self.driver.implicitly_wait(3)
+        self.action = TouchAction(self.driver)
 

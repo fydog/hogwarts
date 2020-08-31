@@ -1,0 +1,7 @@
+- by: id
+  locator: name
+  action: click
+
+- by: id1
+  locator: name1
+  action: click1
