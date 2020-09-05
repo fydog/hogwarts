@@ -52,7 +52,7 @@ class TestCase:
         assert '添加成功' == toasttext
 
     def test_delete(self):
-        username = "用户1"
+        username1 = "用户1"
         self.driver.find_element(MobileBy.XPATH, "//android.widget.TextView[@text='通讯录']").click()
         # 进入通讯录
         self.driver.find_element(MobileBy.XPATH, "//*[@text='用户1']").click()
@@ -75,12 +75,17 @@ class TestCase:
         self.driver.find_element(MobileBy.XPATH, "//*[@text='删除成员']").click()
         self.driver.find_element(MobileBy.XPATH, "//*[@resource-id='com.tencent.wework:id/bfe']").click()
         # 删除成员
-        result = self.driver.find_element(MobileBy.XPATH, "//*[@resource-id='com.tencent.wework:id/b5p']//android.view.ViewGroup").text
-        assert result != username
+        name_list = self.driver.find_elements(MobileBy.XPATH, "//*[@resource-id='com.tencent.wework:id/djr']//android.widget.TextView")
+        list1 = []
+        for name in name_list:
+            list1.append(name.text)
+        return list1
+
+        assert '用户1' not in list1
         # 断言：列表里没username
 
     def teardown(self):
-        pass
+        self.driver.quit()
 
 
 
