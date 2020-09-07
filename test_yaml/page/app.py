@@ -19,7 +19,7 @@ class App(BasePage):
             self._driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
             # 隐式等待
             self._driver.implicitly_wait(8)
-            self.action = TouchAction(self._driver)
+            self._action = TouchAction(self._driver)
         else:
             self._driver.start_activity(_package, _activity)
 
