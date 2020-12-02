@@ -1,0 +1,17 @@
+login:
+  - find: {id:xxx}
+  - action: click()
+  - find: {text:xxx}
+  - send_keys: xxx
+
+search:
+  - id : home_search
+  - click : []
+  - id : search_input_text
+  - send_keys : ${keyword}
+  - id : name
+  - click : []
+
+back:
+  - id : action_close
+  - click : []

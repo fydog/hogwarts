@@ -1,0 +1,13 @@
+params:
+  #列表
+  - keyword : alibaba
+  - keyword : jingdong
+
+#params2:
+#  #词典,正交法
+#  username:
+#    - alibaba
+#    - jingdong
+#
+#  password:
+#    - 123456
